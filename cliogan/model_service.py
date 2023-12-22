@@ -17,13 +17,6 @@ def load_model(numb):
     return keras.models.load_model(f"resources/models/gen31/{numb}/gen/")
 
 
-def make_clio_gan(path):
-    print(path)
-    # dataset = Dataset(dataset_path)
-    # clio_model = ClioModel()
-    # train_model_on_dataset(clio_model, dataset)
-
-
 def image_to_image(gen: keras.Model, image):
     return gen.predict(tf.expand_dims(image, axis=0))
 
